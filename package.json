@@ -1,28 +1,27 @@
 {
-  "name": "prerender-memjs-cache",
+  "name": "prerender-level-cache",
   "version": "0.0.1",
-  "description": "Prerender plugin for memjs caching",
+  "description": "Prerender plugin for level caching",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lammertw/prerender-memjs-cache.git"
+    "url": "git://github.com/maxlath/prerender-level-cache.git"
   },
   "keywords": [
     "prerender",
-    "memjs",
-    "cache",
-    "MemCachier"
+    "level",
+    "cache"
   ],
-  "author": "Lammert Westerhoff",
+  "author": "Maxime Lathuilière",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lammertw/prerender-memjs-cache/issues"
+    "url": "https://github.com/maxlath/prerender-level-cache/issues"
   },
-  "homepage": "https://github.com/lammertw/prerender-memjs-cache",
+  "homepage": "https://github.com/maxlath/prerender-level-cache",
   "dependencies": {
-    "memjs": "~0.8.3"
+    "level-party": "^1.0.1"
   }
 }

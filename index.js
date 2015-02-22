@@ -1,1 +1,1 @@
-module.exports = require('./lib/memjsCache');
+module.exports = require('./lib/level-cache');
