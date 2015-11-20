@@ -21,7 +21,20 @@ Then in the server.js that initializes the prerender:
 
     server.use(require('prerender-level-cache'));
 
-Configuration
+Custom features
 -------------
+* The plugin uses the [level-party](https://github.com/substack/level-party) module to get over the level multi-process restrictions.
 
-The plugin uses the [level-party](https://github.com/substack/level-party) module to get over the level multi-process restrictions.
+* Freshness: you can pass a per-request max age parameter to req.freshness, through other prerender plugins, to customize the cache freshness (set to one month by default):
+
+Exemple:
+```javascript
+// in another plugin placed before prerender-level-cache
+module.exports = {
+  beforePhantomRequest: function(req, res, next){
+    // setting the freshness to one day
+    req.freshness = 24*60*60*1000;
+    next()
+  }
+}
+```
