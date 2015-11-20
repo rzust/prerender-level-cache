@@ -23,9 +23,11 @@ Then in the server.js that initializes the prerender:
 
 Custom features
 -------------
-* The plugin uses the [level-party](https://github.com/substack/level-party) module to get over the level multi-process restrictions.
+#### Level-party
+The plugin uses the [level-party](https://github.com/substack/level-party) module to get over the level multi-process restrictions.
 
-* Freshness: you can pass a per-request max age parameter to req.freshness, through other prerender plugins, to customize the cache freshness (set to one month by default):
+#### Freshness
+You can pass a per-request max age parameter to req.freshness, through other prerender plugins, to customize the cache freshness (set to one month by default):
 
 Exemple:
 ```javascript
