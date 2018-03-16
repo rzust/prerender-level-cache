@@ -1,6 +1,6 @@
 {
   "name": "prerender-level-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prerender plugin for level caching",
   "main": "index.js",
   "scripts": {
