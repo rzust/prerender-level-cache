@@ -8,7 +8,7 @@ How it works
 
 This plugin will store all prerendered pages into a [level database](https://github.com/rvagg/node-levelup). There is currently no expiration functionality, which means that once a page is stored, future requests for prerendering a page will always be served from the cache if it's available and the page caches are never updated.
 
-To get a fresh cache, you will have to delete the cache in the database manually or from another process, or just delete the whole database.
+To get a fresh cache, the easiest is to set `req.freshness = 0` from another prerender plugin. Alternatively, you can delete the cache directly in the LevelDB database.
 
 How to use
 ----------
@@ -33,7 +33,7 @@ Exemple:
 ```javascript
 // in another plugin placed before prerender-level-cache
 module.exports = {
-  beforePhantomRequest: function(req, res, next){
+  requestReceived: function(req, res, next){
     // setting the freshness to one day
     req.freshness = 24*60*60*1000;
     next()
